@@ -1,0 +1,32 @@
+#!/bin/sh
+
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.scripts/:$PATH
+# export PATH=$HOME/.local/share/neovim/bin:$PATH
+export PATH=$HOME:/home/bryant/.local/share/bob/nvim-bin:$PATH
+export PATH=$HOME:/home/bryant/.spicetify:$PATH
+export PATH=$HOME:~/.local/share/nvim/mason/bin:$PATH
+export GPG_TTY=$(tty)
+export PATH=~/.npm-global/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+
+# everblush
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#232a2d,bg:#141b1e,spinner:#e5c76b,hl:#e57474 \
+# --color=fg:#dadada,header:#e57474,info:#c47fd5,pointer:#e5c76b \
+# --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#c47fd5,hl+:#f38ba8"
+
+# mocha
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#3c474d,bg:#1b2124,spinner:#d3b884,hl:#e68183 \
+# --color=fg:#dad0bc,header:#e68183,info:#d699b6,pointer:#d3c5aa \
+# --color=marker:#f5e0dc,fg+:#dad0bc,prompt:#d699b6,hl+:#e68183"

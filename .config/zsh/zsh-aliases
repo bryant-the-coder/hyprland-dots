@@ -1,0 +1,156 @@
+# Dev workflow
+alias CLEAR="clear"
+alias lazy="lazygit"
+alias nv="nvim"
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
+alias nightly="bob install nightly"
+alias stable="bob use stable"
+alias nvimc="cd ~/.config/nvim/ && nvim"
+alias i3conf="zi i3 && nvim"
+alias rust_nightly="rustup update"
+alias nightky="bob use nightly"
+alias wezterm='flatpak run org.wezfurlong.wezterm'
+alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
+
+# Cd into a dir
+alias usb="cd /run/media/bryant/CSF/"
+
+# alias ts="tmux new-session -s"
+# alias ta="tmux attach -t"
+
+# TMUX
+alias fun="ts fun"
+alias dev="ts dev"
+alias hw="ts hw"
+
+# Git
+alias ginit="git init"
+alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias gcl="git clone "
+alias gcla="clone_and_track_all_branches "
+alias gtb="track_all_branches"
+alias gst="git status"
+alias {gbra,gb}="git branch "
+# alias {gco,go}="git checkout "
+alias {gcob,gob}="git checkout -b "
+alias {gadd,ga}="git add "
+alias {gdff,gd}="git diff "
+alias {gcom,gc}="git commit "
+alias {gpul,gl}="git pull "
+alias {gpus,gp}="git push "
+alias glom="git pull origin main"
+alias ghom="git push origin main"
+alias gg="git grep "
+alias gs="git switch "
+alias gr="git restore "
+alias grs="git restore --staged "
+alias gwa="git worktree add "
+alias gwp="git worktree prune"
+
+# Create the dir and cd into it
+function create_dir_and_cd() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: mkc <path>"
+  else
+    mkdir -p "$1"
+    cd "$1"
+  fi
+}
+alias mkc="create_dir_and_cd "
+
+# Record your screen with ffmpeg
+# by siduck
+function ffmpeg_record() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: rec <video name>"
+  else
+    ffmpeg -framerate 60 -f x11grab -i $DISPLAY  -pix_fmt yuv420p "$1".mp4
+  fi
+}
+alias rec="ffmpeg_record"
+
+# Record your screen with ffmpeg in high resolution
+# By siduck
+function ffmpeg_record_high_res() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: rec_high <video name>"
+  else
+    ffmpeg -framerate 60 -f x11grab -i $DISPLAY -c:v libx264rgb -crf 0 -preset ultrafast -color_range 2 "$1".mp4
+  fi
+}
+alias rec_high="ffmpeg_record_high_res"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+function fzf_find() {
+find * | fzf --prompt 'All> ' \
+             --header 'CTRL-D: Directories / CTRL-F: Files' \
+             --bind 'ctrl-d:change-prompt(Directories> )+reload(find * -type d)' \
+             --bind 'ctrl-f:change-prompt(Files> )+reload(find * -type f)'
+}
+
+alias search="fzf_find"
+
+# Use exa to list dir
+# If exa is not found, use ls
+# https://github.com/NTBBloodbath/dotfiles/blob/main/.config/zsh/aliases#L49
+if [[ -x "$(command -v exa)" ]]; then
+  _exa_core_args="exa --icons --group-directories-first"
+  alias ls="$_exa_core_args"
+  alias la="$_exa_core_args --all --ignore-glob=\".git\""
+  alias ll="$_exa_core_args --long --grid --group --accessed --modified --created --header"
+  alias lsa="$_exa_core_args --long --grid --group --accessed --modified --created --header --all"
+  alias lt="$_exa_core_args --all --tree --level=3 --ignore-glob=\".git|.cache|node_modules\""
+else
+  # -v          : natural sort of (version) numbers within text
+  # -p          : append '/' indicator to directories
+  # -N          : print entry names without quoting
+  # --file-type : append special indicators based on filetpe (exluding '*' for binaries/executables)
+  _ls_core_args="ls --color=auto -vpN --file-type --group-directories-first"
+  alias ls="$_ls_core_args"
+  alias la="$_ls_core_args --almost-all -I \".git\""
+  alias ll="$_ls_core_args -ltshc --author"
+  alias lsa="$_ls_core_args -ltshc --author --almost-all -I \".git\""
+  alias lt="tree -L 3 -I \".git|.cache|node_modules\""
+fi
+
+function extract() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+  else
+    if [[ -f "$1" ]]; then
+      case "$1" in
+        *.tar.bz2) tar xvjf "$1" ;;
+        *.tar.gz) tar xvzf "$1" ;;
+        *.tar.xz) tar xvJf "$1" ;;
+        *.lzma) unlzma "$1" ;;
+        *.bz2) bunzip2 "$1" ;;
+        *.rar) unrar x -ad "$1" ;;
+        *.gz) gunzip "$1" ;;
+        *.tar) tar xvf "$1" ;;
+        *.tbz) tar xvjf "$1" ;;
+        *.tbz2) tar xvjf "$1" ;;
+        *.tgz) tar xvzf "$1" ;;
+        *.zip) unzip "$1" ;;
+        *.Z) uncompress "$1" ;;
+        *.7z) 7z x "$1" ;;
+        *.xz) unxz "$1" ;;
+        *.exe) cabextract "$1" ;;
+        *) echo "extract: '$1' - unknown archive method" ;;
+      esac
+    else
+      echo "$1 - file does not exist"
+    fi
+  fi
+}
+alias extr="extract "
+
+
+alias pipe="pipes.sh -t 0"
+alias pip_upgrade="python3 -m pip install --upgrade pip"

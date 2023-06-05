@@ -1,0 +1,178 @@
+command_timeout = 1000
+
+palette = "mocha"
+
+[palettes.everblush]
+background = "#141b1e"
+lighter_background = "#232a2d"
+red = "#e57474"
+green = "#8ccf7e"
+yellow = "#e5c76b"
+blue = "#67b0e8"
+magenta = "#c47fd5"
+cyan = "#6cbfbf"
+light_gray = "#b3b9b8"
+foreground = "#dadada"
+
+[palettes.mocha]
+background = "#1e1e2e"
+lighter_background = "#313244"
+red = "#f38ba8"
+green = "#a6e3a1"
+yellow = "#f9e2af"
+blue = "#89b4fa"
+magenta = "#cba6f7"
+cyan = "#89dceb"
+light_gray = "#a6adc8"
+foreground = "#cdd6f4"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+# Prompt: param 2 └─
+[character]
+success_symbol = " [╰─λ](bold fg:blue)"
+error_symbol = " [](bold fg:red)"
+
+# Third param
+[directory]
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+style = "fg:blue"
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = "../"
+
+[git_branch]
+format = "[ ](fg:foreground)[$symbol$branch ]($style)"
+symbol = " "
+style = "bold magenta"
+
+[git_status]
+format ='([\[$all_status$ahead_behind\] ]($style))'
+conflicted = "="
+ahead =	"[  $count ](fg:green)"
+behind = "[  $count ](fg:red)"
+diverged = "⇕ ${ahead_count} ${behind_count}"
+untracked = "[ ?$count ](fg:cyan)"
+modified = "[ $count ](fg:green)"
+staged = "[ $count ](fg:cyan)"
+renamed = "[ »$count ](fg:magenta)"
+deleted = "[ ✘$count ](fg:red)"
+disabled = false
+style = "fg:foreground"
+
+[cmd_duration]
+disabled = true
+
+[docker_context]
+disabled=true
+symbol = " "
+
+[conda]
+disabled=true
+symbol = " "
+
+[dart]
+disabled=true
+symbol = " "
+
+[package]
+disabled=true
+symbol = " "
+
+[perl]
+disabled=true
+symbol = " "
+
+[php]
+disabled=true
+symbol = " "
+
+[ruby]
+disabled=true
+symbol = " "
+
+[java]
+disabled=true
+symbol = " "
+
+[lua]
+disabled=false
+symbol = " "
+style = "bold blue"
+
+[nodejs]
+disabled=false
+
+[swift]
+disabled=true
+symbol = "ﯣ "
+
+[julia]
+disabled=true
+format = "[$symbol$version]($style) "
+symbol = "ஃ "
+style = "bold green"
+
+[python]
+disabled=false
+# format = 'via [${symbol}${pyenv_prefix}${version}( $virtualenv)]($style) '
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+style = "italic bold yellow"
+
+[rust]
+disabled=false
+format = "on [$symbol$version]($style) "
+# style = "bold green"
+
+[cmake]
+disabled = false
+format = "via [$symbol($version )]($style)"
+style = "bold red"
+
+# add_newline = false
+
+
+# format = "$directory$git_branch$git_status$memory_usage$character"
+
+# [directory]
+# format = "[$path]($style)[  ](bold blue)[$read_only]($read_only_style) "
+# truncation_length = 1
+# truncate_to_repo =false
+# home_symbol = "  "
+
+# [character]
+# success_symbol = "[»](green)"
+# error_symbol = "[»](red)"
+# vicmd_symbol = "[«](green)"
+
+# [git_branch]
+# format = "[$symbol$branch ]($style)"
+# symbol = " "
+# style = "bold #C678DD"
