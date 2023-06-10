@@ -1,0 +1,154 @@
+* {
+  border: none;
+  border-radius: 10px;
+  font-family: Operator Mono SSm Lig Book;
+  font-weight: bold;
+  font-size: 14px;
+  min-height: 0;
+}
+
+@import "themes/mocha.css";
+
+window#waybar {
+  background: none;
+  color: @text;
+}
+
+tooltip {
+  /* background: @base; */
+  background: none;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: @crust;
+}
+
+#workspaces button {
+  padding: 5px;
+  color: @surface1;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  color: @text;
+}
+
+#workspaces button.focused {
+  color: @text;
+  background: @maroon;
+  border-radius: 10px;
+}
+
+#workspaces button.urgent {
+  color: @crust;
+  background: @green;
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  background: @crust;
+  color: @text;
+  border-radius: 10px;
+}
+
+#custom-launcher {
+  background: @rish;
+  padding-right: 7px;
+  padding-left: 7px;
+}
+
+#custom-exit,
+#custom-arch,
+#custom-language,
+#custom-updates,
+#custom-caffeine,
+#clock,
+#battery,
+#pulseaudio,
+#cpu,
+#memory,
+#network,
+#workspaces,
+#tray,
+#backlight {
+  background: @rish;
+  padding: 0px 10px;
+  margin: 3px 0px;
+  /* font-style: italic; */
+}
+
+#tray {
+  border-radius: 10px;
+  margin-right: 4px;
+  font-size: 19px;
+}
+
+#workspaces {
+  background: @rish;
+  border-radius: 10px;
+  padding-right: 0px;
+  padding-left: 5px;
+  margin-left: 5px;
+}
+
+#custom-caffeine {
+  color: @sky;
+  border-radius: 10px 0px 0px 10px;
+  padding-right: 12px;
+}
+
+#inhibitor {
+  background: @base;
+  color: @rosewater;
+  border-radius: 10px 0px 0px 10px;
+  padding-right: 12px;
+  padding-left: 5px;
+}
+
+#custom-language {
+  color: @red;
+}
+
+#custom-updates {
+  color: @pink;
+}
+
+#cpu {
+  background: @rish;
+  padding: 0px 10px;
+  margin: 3px 0px;
+  color: @mauve;
+}
+
+#clock {
+  color: @yellow;
+  border-radius: 10px;
+  /* padding-right: 5px */
+}
+
+#network {
+  color: @lavender;
+  font-style: italic;
+}
+
+#pulseaudio {
+  color: @peach;
+}
+
+#memory {
+  color: @green;
+}
+
+#custom-spotify {
+  background: @rish;
+  color: @text;
+}
+
+#custom-arch {
+  background: @rish;
+  color: @sapphire;
+}
+
+/* #custom-weather { */
+/*     background: @rish; */
+/* } */

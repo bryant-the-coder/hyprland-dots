@@ -1,21 +1,143 @@
+// {
+//     "layer": "top",
+//     "position": "top",
+//     "height": 25,
+//     "modules-left": [
+//         "clock",
+//         "custom/weather",
+//     ],
+//     "clock": {
+//         "on-click": "",
+//         "format": "{: %R   %d/%m}",
+//         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+//     },
+//     "custom/weather": {
+//         "exec": "python ~/.config/waybar/scripts/weather.py",
+//         "restart-interval": 300,
+//         "return-type": "json",
+//         "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
+//         // "format-alt": "{alt}",
+//     },
+// }
 {
     "layer": "top",
     "position": "top",
-    "height": 25,
+    "height": 38,
+    "spacing": 10,
     "modules-left": [
+        "custom/arch",
         "clock",
-        "custom/weather",
+        "custom/weather"
     ],
+    "modules-center": [
+        "wlr/workspaces"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "cpu",
+        "memory",
+        // "tray",
+        "network"
+    ],
+    // "custom/weather": {
+    //     "exec": "python ~/.config/waybar/scripts/weather.py",
+    //     "restart-interval": 300,
+    //     "return-type": "json",
+    //     "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
+    //     // "format-alt": "{alt}",
+    // },
+    "custom/weather": {
+        "tooltip": true,
+        "format": "{}",
+        "interval": 30,
+        "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type": "json"
+    },
+    "custom/launcher": {
+        "format": "<span color='#F38BA8'></span>",
+        // "on-click": "wofi --show drun --insensitive --allow-images"
+        "on-click": "pkill rofi || rofi -show drun --insensitive --allow-images"
+    },
+    "wlr/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "on-scroll-up": "hyprctl dispatch workspace e-1"
+        // "format-icons": 
+        //   "1": "",
+        //   "2": "",
+        //   "3": "󰙯",
+        //   "4": "",
+        //   "5": "",
+        //   "6": "",
+        //   "7": "7.",
+        //   "8": "8.",
+        //   "9": "9.",
+        //   "10": "10.",
+        //   // "default": "",
+        //   // "active": ""
+        // }
+    },
+    "tray": {
+        "on-click": "",
+        "icon-size": 17,
+        "spacing": 10
+    },
     "clock": {
         "on-click": "",
         "format": "{: %R   %d/%m}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-    "custom/weather": {
-        "exec": "python ~/.config/waybar/scripts/weather.py",
-        "restart-interval": 300,
-        "return-type": "json",
-        "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
-        // "format-alt": "{alt}",
+    "network": {
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": "󰈀 {essid}",
+        "format-linked": "{ifname} (No IP) 󰊗",
+        "format-disconnected": "󰖪 Disc.",
+        "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}"
     },
+    "cpu": {
+        "on-click": "",
+        "interval": 10,
+        "format": " {}%"
+        // "max-length": 10
+    },
+    "memory": {
+        "on-click": "",
+        "interval": 30,
+        "format": " {used:0.1f}G/{total:0.1f}G"
+        // "max-length": 30
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muted",
+        "on-click": "pavucontrol",
+        "scroll-step": 1,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                "󰕾",
+                ""
+            ]
+        }
+    },
+    "custom/spotify": {
+        "exec": "$HOME/.config/waybar/scripts/spotify.sh",
+        "max-length": 33,
+        "format": " {}",
+        "on-click": "playerctl play-pause",
+        "on-double-click": "playerctl next",
+        "on-right-click": "python /home/rishabh/.config/hypr/scripts/empris.py"
+    },
+    "custom/arch": {
+        "format": "  "
+    }
 }

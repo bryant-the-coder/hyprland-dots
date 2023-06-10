@@ -6,23 +6,23 @@ import json
 
 # weather icons
 weather_icons = {
-    "sunnyDay": "滛",
-    "clearNight": "望",
-    "cloudyFoggyDay": "",
-    "cloudyFoggyNight": "",
-    "rainyDay": "",
-    "rainyNight": "",
-    "snowyIcyDay": "",
-    "snowyIcyNight": "",
-    "severe": "",
-    "default": "",
+    "sunnyDay": "󰖨 ",
+    "clearNight": " ",
+    "cloudyFoggyDay": " ",
+    "cloudyFoggyNight": " ",
+    "rainyDay": " ",
+    "rainyNight": " ",
+    "snowyIcyDay": " ",
+    "snowyIcyNight": " ",
+    "severe": "󰚌 ",
+    "default": "",
 }
 
 # get location_id
 # to get your own location_id, go to https://weather.com & search your location.
 # once you choose your location, you can see the location_id in the URL(64 chars long hex string)
 # like this: https://weather.com/en-IN/weather/today/l/c3e96d6cc4965fc54f88296b54449571c4107c73b9638c16aafc83575b4ddf2e
-location_id = "c3e96d6cc4965fc54f88296b54449571c4107c73b9638c16aafc83575b4ddf2e"  # TODO
+location_id = "f9fb92ee44840e828a69ad12a1b94acace515aef5983f5ef0a1a3c1a53abaa64"  # TODO
 # location_id = "8139363e05edb302e2d8be35101e400084eadcecdfce5507e77d832ac0fa57ae"
 
 # priv_env_cmd = 'cat $PRIV_ENV_FILE | grep weather_location | cut -d "=" -f 2'
@@ -43,7 +43,7 @@ status = f"{status[:16]}.." if len(status) > 17 else status
 # print(status)
 
 # status code
-status_code = html_data("#regionHeader").attr("class").split(" ")[2].split("-")[2]
+status_code = html_data("#regionHeader").attr("class").split("-")[2]
 # print(status_code)
 
 # status icon
@@ -77,7 +77,7 @@ temp_min_max = f"  {temp_min}\t\t  {temp_max}"
 
 # wind speed
 wind_speed = html_data("span[data-testid='Wind']").text().split("\n")[1]
-wind_text = f"煮  {wind_speed}"
+wind_text = f"  {wind_speed}"
 # print(wind_text)
 
 # humidity
@@ -106,7 +106,7 @@ prediction = f"\n\n    (hourly) {prediction}" if len(prediction) > 0 else 
 tooltip_text = str.format(
     "\t\t{}\t\t\n{}\n{}\n{}\n\n{}\n{}\n{}{}",
     f'<span size="xx-large">{temp}</span>',
-    f"<big>{icon}</big>",
+    f"<small>{icon}</small>",
     f"<big>{status}</big>",
     f"<small>{temp_feel_text}</small>",
     f"<big>{temp_min_max}</big>",
