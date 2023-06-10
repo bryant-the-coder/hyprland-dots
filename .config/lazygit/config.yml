@@ -1,8 +1,8 @@
 notARepository: "create"
 
 os:
-  editCommand: "nvim" # see 'Configuring File Editing' section
-  editCommandTemplate: "{{editor}} {{filename}}"
+  edit: "nvim" # see 'Configuring File Editing' section
+  editAtLine: "{{editor}} {{filename}}"
   openCommand: ""
 keybinding:
   universal:
@@ -18,3 +18,24 @@ customCommands:
     command: "git {{if .SelectedFile.HasUnstagedChanges}} add {{else}} reset {{end}} {{.SelectedFile.Name}}"
     context: "files"
     description: "toggle file staged"
+gui:
+  # use the mocha catppuccin theme
+  theme:
+    lightTheme: false
+    activeBorderColor:
+      - "#a6e3a1" # Green
+      - bold
+    inactiveBorderColor:
+      - "#cdd6f4" # Text
+    optionsTextColor:
+      - "#89b4fa" # Blue
+    selectedLineBgColor:
+      - "#313244" # Surface0
+    selectedRangeBgColor:
+      - "#313244" # Surface0
+    cherryPickedCommitBgColor:
+      - "#94e2d5" # Teal
+    cherryPickedCommitFgColor:
+      - "#89b4fa" # Blue
+    unstagedChangesColor:
+      - red # Red
