@@ -4,7 +4,7 @@ description:
 authors: bryant
 categories: 
 created: 2023-06-03
-updated: 2023-06-05
+updated: 2023-06-09
 version: 1.1.1
 @end
 
@@ -21,10 +21,12 @@ version: 1.1.1
 
 * Bar
 - ( ) Install waybar
--- ( ) Configure waybar
+  - (x) Configure waybar
+  - ( ) Refractor the css code
+  - ( ) Module for changing wallpaper
 
 * Dev Tools
 - (x) Configure zathura
 
 * Prettiness 
-- ( ) Setup wallpaper (swww)
+- (x) Setup wallpaper (swww)
