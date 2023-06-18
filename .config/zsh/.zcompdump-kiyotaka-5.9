@@ -1,4 +1,4 @@
-#files: 843	version: 5.9
+#files: 844	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -80,6 +80,7 @@ _comps=(
 'basename' '_basename'
 'basenc' '_basenc'
 'bash' '_bash'
+'bat' '_bat'
 'batch' '_at'
 'baz' '_baz'
 'beep' '_beep'
@@ -89,7 +90,6 @@ _comps=(
 'bison' '_bison'
 'bluetoothctl' '_bluetoothctl'
 'bmake' '_make'
-'bob' '_bob'
 'bogofilter' '_bogofilter'
 'bogotune' '_bogofilter'
 'bogoutil' '_bogofilter'
@@ -1698,8 +1698,8 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _rustc _pip _cargo _rustup _bluetoothctl \
-            _bob _bootctl _busctl _bwrap _cargo \
+autoload -Uz _rustc _pip _cargo _rustup _bat \
+            _bluetoothctl _bootctl _busctl _bwrap _cargo \
             _checkupdates _code _coredumpctl _curl _docker \
             _downgrade _exa _firewalld _hostnamectl _journalctl \
             _kernel-install _libinput _localectl _loginctl _machinectl \
@@ -1872,5 +1872,5 @@ autoload -Uz +X _call_program
 typeset -gUa _comp_assocs
 _comp_assocs=( '' )
 
-#omz revision: fb4213c34ff8ec83cbe6251f432fdac383378562
+#omz revision: cb8b677488c7a20278917af58dfccd72cd40e1b1
 #omz fpath: /home/bryant/.oh-my-zsh/plugins/zoxide /home/bryant/.oh-my-zsh/plugins/web-search /home/bryant/.oh-my-zsh/custom/plugins/fzf-tab /home/bryant/.oh-my-zsh/custom/plugins/zsh-autosuggestions /home/bryant/.oh-my-zsh/plugins/tmux /home/bryant/.oh-my-zsh/plugins/rust /home/bryant/.oh-my-zsh/plugins/poetry /home/bryant/.oh-my-zsh/plugins/pip /home/bryant/.oh-my-zsh/plugins/git /home/bryant/.oh-my-zsh/plugins/history-substring-search /home/bryant/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting /home/bryant/.oh-my-zsh/plugins/fzf /home/bryant/.oh-my-zsh/functions /home/bryant/.oh-my-zsh/completions /home/bryant/.oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Math /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle
