@@ -1,7 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/bryant/.config/nvim
+- /home/bryant/dev/CLONES/fonts
 - /home/bryant/dev/PERSONAL/cpp-journey
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- q
 hidecommandlog: false
