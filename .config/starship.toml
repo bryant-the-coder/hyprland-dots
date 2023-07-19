@@ -158,6 +158,9 @@ disabled = false
 format = "via [$symbol($version )]($style)"
 style = "bold red"
 
+[golang]
+format = 'via [󰟓 $version](bold cyan) '
+
 # add_newline = false
 
 

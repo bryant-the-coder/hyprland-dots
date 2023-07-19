@@ -46,13 +46,13 @@
     //     "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
     //     // "format-alt": "{alt}",
     // },
-    "custom/weather": {
-        "tooltip": true,
-        "format": "{}",
-        "interval": 30,
-        "exec": "~/.config/waybar/scripts/waybar-wttr.py",
-        "return-type": "json"
-    },
+    // "custom/weather": {
+    //     "tooltip": true,
+    //     "format": "{}",
+    //     "interval": 30,
+    //     "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    //     "return-type": "json"
+    // },
     "custom/launcher": {
         "format": "<span color='#F38BA8'></span>",
         // "on-click": "wofi --show drun --insensitive --allow-images"

@@ -48,7 +48,7 @@ tooltip {
 #workspaces button:hover {
   background: @crust;
   color: @text;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #custom-launcher {
