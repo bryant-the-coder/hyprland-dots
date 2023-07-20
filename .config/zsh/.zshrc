@@ -134,3 +134,4 @@ eval "$(zoxide init zsh)"
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 export PATH=$PATH:/home/bryant/.spicetify
 
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
