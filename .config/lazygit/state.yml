@@ -1,9 +1,10 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/bryant/.config/nvim
-- /home/bryant/.config
-- /home/bryant/dev/clone/base16
+    - /home/bryant/.config/local/share/nvim/lazy/neogit
+    - /home/bryant/.config/nvim
+    - /home/bryant/.config
+    - /home/bryant/dev/clone/base16
 startuppopupversion: 5
 customcommandshistory:
-- q
+    - q
 hidecommandlog: false
