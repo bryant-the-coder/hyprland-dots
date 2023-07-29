@@ -1,0 +1,9 @@
+~/.config/spicetify/Backup/*
+~/.config/spicetify/Themes/*
+~/.config/spicetify/Extracted/*
+~/.config/spicetify/CustomApps/*
+~/.config/spicetify/Extensions/*
+
+~/.config/zsh/.zcompdump-kiyotaka-5.9
+~/.config/zsh/.zcompdump-kiyotaka-5.8.1
+~/.config/zsh/.zcompdump-kiyotaka-5.9.zwc
