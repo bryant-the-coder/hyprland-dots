@@ -1,7 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/bryant/.config/local/share/nvim/lazy/neogit
     - /home/bryant/.config/nvim
+    - /home/bryant/.config/local/share/nvim/lazy/neogit
     - /home/bryant/.config
     - /home/bryant/dev/clone/base16
 startuppopupversion: 5
