@@ -14,7 +14,7 @@ yay -S bat brave-bin btop calcure\
     catppuccin-gtk-theme-mocha clipman exa fd github-cli\
     go grimshot grub-customizer hyprland hyprpaper kitty\
     lazygit meson ninja python rofi spotify starship zathura\
-    zoxide tmux
+    zoxide tmux --noconfirm --needed
 
 # Check and set Zsh as the default shell
 [[ "$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd) " =~ "zsh " ]] || chsh -s $(which zsh)
