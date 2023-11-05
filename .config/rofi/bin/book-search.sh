@@ -18,7 +18,7 @@
 # Script:
 
 # Books directory
-BOOKS_DIR=~/Library
+BOOKS_DIR=~/Resources
 mkdir -p ~/Library
 
 # Save find result to F_ARRAY
