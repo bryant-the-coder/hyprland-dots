@@ -151,6 +151,7 @@ style = "italic bold yellow"
 [rust]
 disabled=false
 format = "on [$symbol$version]($style) "
+symbol = " "
 # style = "bold green"
 
 [cmake]

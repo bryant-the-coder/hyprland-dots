@@ -115,10 +115,8 @@ for_window [class="^discord"] move container to workspace $ws4
 # exec_always xrandr --output Virtual-1 --mode 1920x1080
 
 # Wallpaper
-# exec_always feh --bg-fill ~/.config/wallpaper/nature/wallhaven-nk7zvm.png
-# exec_always feh --bg-fill ~/.config/wallpaper/anime/my_hero_academia_darken.png
-exec_always feh --bg-fill ~/.config/i3/wallpaperflare.com_wallpaper.jpg
-# exec_always feh --bg-fill ~/.config/wallpaper/quotes/night.jpg
+# exec_always feh --bg-fill ~/.config/i3/wallpaperflare.com_wallpaper.jpg
+exec_always feh --bg-fill ~/Pictures/futuristic_scifi_city.jpg
 exec --no-startup-id setxkbmap -layout 'us,mn' -variant qwerty -option 'grp:alt_shift_toggle'
 # exec_always feh --bg-fill ~/.config/wallpaper/anime/zenitsu_thunder_clap.jpg
 # exec_always feh --bg-fill ~/.config/wallpaper/nature/japanese_pedestrian_street_everforest.png

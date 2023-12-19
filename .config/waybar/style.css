@@ -84,7 +84,6 @@ tooltip {
 }
 
 #workspaces {
-  background: @rish;
   border-radius: 10px;
   padding-right: 0px;
   padding-left: 5px;
@@ -152,3 +151,9 @@ tooltip {
 /* #custom-weather { */
 /*     background: @rish; */
 /* } */
+#custom-changebg {
+  background: @rish;
+  border-radius: 10px;
+  padding: 0px 10px;
+  color: @teal;
+}
