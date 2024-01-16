@@ -13,6 +13,7 @@ alias rust_nightly="rustup update"
 alias nightky="bob use nightly"
 alias wezterm='flatpak run org.wezfurlong.wezterm'
 alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
+alias py3="python3 "
 
 # Cd into a dir
 alias usb="cd /run/media/bryant/CSF/"
