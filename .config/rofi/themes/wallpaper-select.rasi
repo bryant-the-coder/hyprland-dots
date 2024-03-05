@@ -1,0 +1,130 @@
+/* config - Wallpaper select */
+
+/* ---- Configuration ---- */
+configuration {
+    modi:                        "drun";
+    show-icons:                  true;
+    drun-display-format:         "{name}";
+    font:                        "JetBrainsMono Nerd Font 10";
+	drun-display-format:         "{name}";
+    hover-select:                true;
+    me-select-entry:             "MouseSecondary";
+    me-accept-entry:             "MousePrimary";
+    window-format:               "{w} · {c} · {t}";
+	dpi:						 1;
+    font:                        "JetBrains Mono Nerd Font 10";
+}
+
+/* Importing colors */
+@theme "~/.config/rofi/colors/catppuccin.rasi"
+
+/* ---- Window ---- */
+window {
+    // Default
+    enabled:                     true;
+    fullscreen:                  false;
+    transparency:                "real";
+    cursor:                      "default";
+    spacing:                     0px;
+    border:                      2px;
+    border-radius:               30px;
+    location:                    center;
+    anchor:                      center;
+
+    // Style Values
+    width:                       75%;
+    background-color:            #00000088;
+}
+
+/* ---- Mainbox ---- */
+mainbox {
+    enabled:                     true;
+    children:                    [ "listview" ];
+    background-color:            transparent;
+}
+
+/* ---- List ---- */
+listview {
+    enabled:                     true;
+    columns:                     4;
+    lines:                       2;
+    padding:                     26px 36px;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    background-color:            transparent;
+    spacing:                     20px;
+    
+    //  Adapt rofi theme
+    border:                      0px;
+
+}
+
+/* ---- Elements ---- */
+element {
+    enabled:                     true;
+    orientation:                 vertical;
+    expand:                      false;
+    spacing:                     0px;
+    padding:                     5px 10px;
+    border-radius:               26px;
+    cursor:                      "default";
+    background-color:            transparent;
+}
+
+
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  @foreground;
+}
+element normal.urgent {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+element normal.active {
+    background-color:            @active;
+    text-color:                  @foreground;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+// Adapt rofi theme
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+element alternate.urgent {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+element alternate.active {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+/* ---- Image Box ---- */
+element-icon {
+    size:                        30%;
+    cursor:                      "default";
+    expand: false;
+    padding:                     0px;
+    background-color:            inherit;
+}
+element-text {
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    cursor:                      "default";
+    background-color:            transparent;
+}
+
+// Adapt rofi theme
+element.alternate.normal {
+    background-color:            transparent;
+    text-color:                  inherit;
+}

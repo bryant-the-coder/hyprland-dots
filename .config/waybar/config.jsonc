@@ -25,7 +25,8 @@
   "height": 38,
   "spacing": 10,
   "modules-left": ["custom/arch", "clock"],
-  "modules-center": ["hyprland/workspaces"],
+  // "modules-center": ["hyprland/workspaces"],
+  // "modules-center": ["wlr/taskbar"],
   "modules-right": [
     "pulseaudio",
     "cpu",
@@ -139,5 +140,14 @@
   },
   "custom/arch": {
     "format": "  ",
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 28,
+    "all-outputs": true,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": ["wofi"],
   },
 }

@@ -11,7 +11,7 @@ alias nvimc="cd ~/.config/nvim/ && nvim"
 alias i3conf="zi i3 && nvim"
 alias rust_nightly="rustup update"
 alias nightky="bob use nightly"
-alias wezterm='flatpak run org.wezfurlong.wezterm'
+# alias wezterm='flatpak run org.wezfurlong.wezterm'
 alias rel="xrdb merge ~/.Xresources && kill -USR1 $(pidof st)"
 alias py3="python3 "
 

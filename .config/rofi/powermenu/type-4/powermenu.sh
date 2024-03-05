@@ -94,6 +94,8 @@ case ${chosen} in
 			betterlockscreen -l
 		elif [[ -x '/usr/bin/i3lock' ]]; then
 			i3lock
+        elif [[ -x '/home/bryant/Dev/Clone/hyprlock/build/hyprlock' ]]; then
+            hyprlock
 		fi
         ;;
     $suspend)
@@ -103,3 +105,4 @@ case ${chosen} in
 		run_cmd --logout
         ;;
 esac
+

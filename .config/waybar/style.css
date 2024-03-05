@@ -62,7 +62,6 @@ tooltip {
 }
 
 #custom-exit,
-#custom-arch,
 #custom-language,
 #custom-updates,
 #custom-caffeine,
@@ -150,6 +149,8 @@ tooltip {
 #custom-arch {
   background: @rish;
   color: @sapphire;
+  padding: 0px 10px;
+  margin: 3px 0px;
 }
 
 /* #custom-weather { */
