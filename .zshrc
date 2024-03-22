@@ -99,7 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=$PATH:/home/bryant/.spicetify
 
 # bun completions
 [ -s "/home/bryant/.local/share/reflex/bun/_bun" ] && source "/home/bryant/.local/share/reflex/bun/_bun"
