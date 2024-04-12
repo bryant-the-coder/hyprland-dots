@@ -21,7 +21,7 @@ if pidof swaybg > /dev/null; then
 fi
 
 # Retrieve image files
-PICS=($(ls "${wallDIR}" | grep -E ".jpg$|.jpeg$|.png$|.gif$"))
+PICS=($(ls "${wallDIR}" | grep -E ".jpg$|.jpeg$|.png$|.gif|.mp4$"))
 RANDOM_PIC="${PICS[$((RANDOM % ${#PICS[@]}))]}"
 RANDOM_PIC_NAME="${#PICS[@]}. random"
 

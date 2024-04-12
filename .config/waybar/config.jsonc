@@ -90,7 +90,8 @@
   },
   "clock": {
     "on-click": "",
-    "format": "{: %R   %d/%m}",
+    // "format": " {:%R  %d-%m}  ",
+    "format": " {:%R   %d-%m-%Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
   },
   "network": {

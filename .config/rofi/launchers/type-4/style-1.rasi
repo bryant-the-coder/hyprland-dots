@@ -80,7 +80,7 @@ mainbox {
     border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
-    background-color:            transparent;
+    background-color:            @background-colour;
     children:                    [ "inputbar", "message", "listview", "mode-switcher" ];
 }
 
@@ -138,7 +138,7 @@ listview {
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @border-colour;
-    background-color:            transparent;
+    background-color:            @background-colour;
     text-color:                  @foreground-colour;
     cursor:                      "default";
 }

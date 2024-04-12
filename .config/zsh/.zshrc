@@ -132,4 +132,23 @@ eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-# export PATH=$PATH:/home/bryant/.spicetify
+[ -f /opt/mambaforge/etc/profile.d/conda.sh ] && source /opt/mambaforge/etc/profile.d/conda.sh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/mambaforge/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/opt/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/opt/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/opt/mambaforge/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
