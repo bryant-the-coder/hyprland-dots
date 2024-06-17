@@ -97,6 +97,7 @@ find * | fzf --prompt 'All> ' \
 }
 
 alias search="fzf_find"
+alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :100000 {}'"
 
 # Use exa to list dir
 # If exa is not found, use ls

@@ -1,13 +1,18 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/bryant/.config/nvim
-- /home/bryant/Dev/Personal/base16
-- /home/bryant/Project/cpp
-- /home/bryant/Project/Python
-- /home/bryant/Dev/Personal/raspuchin.nvim
-- /home/bryant/Project/3D-portfolio
+    - /home/bryant/.config/nvim
+    - /home/bryant/.config/lazygit
+    - /home/bryant/Dev/Personal/base16
+    - /home/bryant/Project/cpp
+    - /home/bryant/Dev/Personal/raspuchin.nvim
 startuppopupversion: 5
+lastversion: 0.42.0
 customcommandshistory:
-- q
+    - q
 hidecommandlog: false
 ignorewhitespaceindiffview: false
+diffcontextsize: 3
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always
