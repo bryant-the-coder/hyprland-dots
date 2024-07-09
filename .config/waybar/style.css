@@ -1,6 +1,6 @@
 * {
-  border: none;
-  border-radius: 10px;
+  /* border: none; */
+  /* border-radius: 100px; */
   font-family: Operator Mono SSm Lig Book;
   font-weight: bold;
   font-size: 14px;
@@ -10,8 +10,12 @@
 @import "themes/mocha.css";
 
 window#waybar {
-  background: none;
+  background: @rish;
   color: @text;
+  /* border-radius: 10px; */
+  /* border-width: 2px; */
+  /* border-style: solid; */
+  /* border-color: #ffffff; */
 }
 
 /* window.left_bar#waybar { */

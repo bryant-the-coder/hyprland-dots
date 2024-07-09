@@ -33,7 +33,7 @@ floating_modifier $mod
 for_window [class="^.*"] border pixel 1
 
 # i3-gaps
-gaps inner 10
+gaps inner 6
 gaps top 3
 gaps bottom 3
 gaps right 3
