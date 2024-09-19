@@ -87,6 +87,8 @@ plugins=(
     fzf
     zsh-syntax-highlighting
     history-substring-search
+    poetry-env
+    poetry
     git
     pip
     rust
@@ -100,6 +102,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 # export ZDOTDIR=$HOME/.config/zsh
 source "$ZDOTDIR/zsh-functions"
 # source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
@@ -124,8 +128,6 @@ fi
 
 # export FZF_DEFAULT_COMMAND='fzf'
 # export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=80%"
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 # [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
@@ -168,3 +170,19 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
+
+# Load pyenv automatically by appending
+# the following to 
+# ~/.bash_profile if it exists, otherwise ~/.profile (for login shells)
+# and ~/.bashrc (for interactive shells) :
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Restart your shell for the changes to take effect.
+
+# Load pyenv-virtualenv automatically by adding
+# the following to ~/.bashrc:
+
+eval "$(pyenv virtualenv-init -)"

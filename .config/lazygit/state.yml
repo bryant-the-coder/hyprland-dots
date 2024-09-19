@@ -6,7 +6,7 @@ recentrepos:
     - /home/bryant/Dev/Personal/base16
     - /home/bryant/Dev/Personal/raspuchin.nvim
 startuppopupversion: 5
-lastversion: 0.43.1
+lastversion: 0.44.0
 customcommandshistory:
     - q
 hidecommandlog: false
