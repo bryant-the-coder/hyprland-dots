@@ -1,12 +1,14 @@
 lastupdatecheck: 0
 recentrepos:
+    - /home/bryant/Dev/Clone/Gemail-Hack
     - /home/bryant/.config/nvim
+    - /home/bryant/Project/Python/restaurant
     - /home/bryant/Project/cpp
     - /home/bryant/.config/lazygit
     - /home/bryant/Dev/Personal/base16
     - /home/bryant/Dev/Personal/raspuchin.nvim
 startuppopupversion: 5
-lastversion: 0.44.0
+lastversion: 0.44.1
 customcommandshistory:
     - q
 hidecommandlog: false
