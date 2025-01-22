@@ -5,4 +5,7 @@
 ~/.config/spicetify/Extensions/*
 
 ~/.config/zsh/.zcompdump*
+~/.config/zsh/.zsh_history
+~/.config/zsh/.zshrc.old
+~/.config/zsh/.p10k.zsh
 ~/.config/tmux/plugins/
