@@ -28,8 +28,13 @@
         "custom/arch",
         "clock"
     ],
-    // "modules-center": ["hyprland/workspaces"],
-    // "modules-center": ["wlr/taskbar"],
+    "modules-center": [
+        // "hyprland/workspaces"
+        "sway/workspaces"
+    ],
+    // "modules-center": [
+    //     "wlr/taskbar"
+    // ],
     "modules-right": [
         "pulseaudio",
         "cpu",
@@ -161,4 +166,14 @@
             "wofi"
         ],
     },
+    "sway/workspaces": {
+        "persistant_workspaces": {
+            "1": [], // Always show a workspace with name '3', on all outputs if it does not exists
+            "2": [], // Always show a workspace with name '3', on all outputs if it does not exists
+            "3": [], // Always show a workspace with name '3', on all outputs if it does not exists
+            "4": [], // Always show a workspace with name '3', on all outputs if it does not exists
+            "5": [], // Always show a workspace with name '3', on all outputs if it does not exists
+            "6": [], // Always show a workspace with name '3', on all outputs if it does not exists
+        }
+    }
 }

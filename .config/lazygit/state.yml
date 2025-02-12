@@ -1,7 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/bryant/Dev/Clone/Havoc
     - /home/bryant/.config/nvim
+    - /home/bryant/Dev/Clone/Havoc
     - /home/bryant/Project/Python/library-management-system
     - /home/bryant/Dev/Clone/Gemail-Hack
     - /home/bryant/Project/Python/restaurant
@@ -10,7 +10,7 @@ recentrepos:
     - /home/bryant/Dev/Personal/base16
     - /home/bryant/Dev/Personal/raspuchin.nvim
 startuppopupversion: 5
-lastversion: 0.44.1
+lastversion: 0.45.2
 customcommandshistory:
     - q
 hidecommandlog: false

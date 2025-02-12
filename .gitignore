@@ -9,3 +9,5 @@
 ~/.config/zsh/.zshrc.old
 ~/.config/zsh/.p10k.zsh
 ~/.config/tmux/plugins/
+
+~/.config/lazygit/state.yml
