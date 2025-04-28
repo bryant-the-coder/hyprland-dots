@@ -198,3 +198,5 @@ function y() {
 # the following to ~/.bashrc:
 
 # eval "$(pyenv virtualenv-init -)"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
